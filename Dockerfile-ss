@@ -1,0 +1,11 @@
+FROM debian:latest
+MAINTAINER alexwhen <alexwhen@gmail.com>
+COPY ./* /usr/bin/
+RUN chmod +x ss
+
+ENTRYPOINT ["/usr/bin/ss"]
+
+EXPOSE 1080
+
+
+
