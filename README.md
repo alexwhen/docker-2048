@@ -9,5 +9,5 @@ Base on nginx
 
 #how to use
 
-##git clone this project ,and docker build -t "yourname" .
-
+git clone this project ,and docker build -t "yourname" .
+you can also pull this image 
