@@ -24,4 +24,6 @@ CMD ["nginx", "-g", "daemon off;"]
 
 #how to use
 
-git clone this project ,and docker build -t "yourname" . or docker pull alexwhen/docker-2048
+git clone this project ,and docker build -t "yourname" . 
+
+# docker pull alexwhen/docker-2048
