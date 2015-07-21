@@ -12,21 +12,32 @@ Base on nginx
 
 #dockerfile
 
-FROM alpine:latest
+    FROM alpine:latest
 
-MAINTAINER alex <alexwhen@gmail.com>
+    MAINTAINER alex <alexwhen@gmail.com>
 
-RUN apk --update add nginx
+    RUN apk --update add nginx
 
-COPY . /usr/share/nginx/html
+    COPY . /usr/share/nginx/html
 
-EXPOSE 80
+    EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+    CMD ["nginx", "-g", "daemon off;"]
 
+# run the docker container with your own build
 
-#how to use
+    git clone https://github.com/alexwhen/docker-2048.git
+    docker build -t "docker-2048" .
+    docker run -d -p 8080:80 docker-2048
 
-git clone this project ,and docker build -t "yourname" .
+# run the docker container by pulling the image directly
 
-# docker pull alexwhen/docker-2048
+    docker run -d -p 8080:80 alexwhen/docker-2048
+
+# Access the game
+
+    http://127.0.0.1:8080
+
+If you run docker with boot2docker on Mac or Windows, the URL should be:
+ 
+    http://192.168.59.103:8080
