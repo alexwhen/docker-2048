@@ -33,3 +33,11 @@ Base on nginx
 # run the docker container by pulling the image directly
 
     docker run -d -p 8080:80 alexwhen/docker-2048
+
+# Access the game
+
+    http://127.0.0.1:8080
+
+If you run docker with boot2docker on Mac or Windows, the URL should be:
+ 
+    http://192.168.59.103:8080
