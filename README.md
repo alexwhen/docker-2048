@@ -10,23 +10,12 @@ Base on alpine
 
 Base on nginx
 
-#dockerfile
+# run the docker container with your own build
 
-FROM alpine:latest
+    git clone https://github.com/alexwhen/docker-2048.git
+    docker build -t "docker-2048" .
+    docker run -d -p 8080:80 docker-2048
 
-MAINTAINER alex <alexwhen@gmail.com>
+# run the docker container by pulling the image directly
 
-RUN apk --update add nginx
-
-COPY . /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
-
-
-#how to use
-
-git clone this project ,and docker build -t "yourname" .
-
-# docker pull alexwhen/docker-2048
+    docker run -d -p 8080:80 alexwhen/docker-2048
