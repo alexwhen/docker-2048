@@ -18,7 +18,7 @@ Base on nginx
 
     RUN apk --update add nginx
 
-    COPY . /usr/share/nginx/html
+    COPY 2048 /usr/share/nginx/html
 
     EXPOSE 80
 
