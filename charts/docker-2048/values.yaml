@@ -1,7 +1,7 @@
 # Default values for node projects.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-replicaCount: 1
+replicaCount: 2
 image:
   repository: draft
   tag: dev
@@ -9,8 +9,8 @@ image:
 service:
   name: docker-2048
   type: ClusterIP
-  externalPort: 80
-  internalPort: 8080
+  externalPort: 8080
+  internalPort: 80
   annotations:
     fabric8.io/expose: "true"
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
