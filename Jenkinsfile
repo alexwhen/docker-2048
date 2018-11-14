@@ -19,6 +19,7 @@ pipeline {
 
             sh "npm install"
             sh "CI=true DISPLAY=:99 npm test"
+            sh "echo test build"
 
             sh 'export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml'
 
