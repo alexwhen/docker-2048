@@ -4,25 +4,17 @@ simple is better
 
 a smaller docker version of 2048
 
-Base on gabrielecirulli/2048(https://github.com/gabrielecirulli/2048)
-
-Base on alpine
+Base on gabrielecirulli/2048 (https://github.com/gabrielecirulli/2048)
 
 Base on nginx
 
 #dockerfile
 
-    FROM alpine:latest
-
-    MAINTAINER alex <alexwhen@gmail.com>
-
-    RUN apk --update add nginx
+    FROM nginx:latest
 
     COPY 2048 /usr/share/nginx/html
 
     EXPOSE 80
-
-    CMD ["nginx", "-g", "daemon off;"]
 
 # run the docker container with your own build
 
@@ -37,7 +29,3 @@ Base on nginx
 # Access the game
 
     http://127.0.0.1:8080
-
-If you run docker with boot2docker on Mac or Windows, the URL should be:
- 
-    http://192.168.59.103:8080
