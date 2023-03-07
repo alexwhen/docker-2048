@@ -31,6 +31,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.GITHUB_SHA }}
+          tags: ${{ env.REGISTRY }}/${{ env.GITHUB_SHA }}
           cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           cache-to: type=inline
