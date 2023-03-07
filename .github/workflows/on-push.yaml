@@ -32,5 +32,3 @@ jobs:
           context: .
           push: true
           tags: ${{ env.REGISTRY }}/${{ github.sha }}
-          cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ github.sha }}
-          cache-to: type=inline
